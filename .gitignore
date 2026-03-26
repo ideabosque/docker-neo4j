@@ -1,0 +1,5 @@
+# Environment variables
+.env
+
+# Neo4j data (host mount)
+neo4j_data/

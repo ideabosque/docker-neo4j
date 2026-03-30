@@ -7,6 +7,9 @@ services:
       - "${NEO4J_BOLT_PORT}:7687"     # Bolt Protocol
     environment:
       NEO4J_AUTH: ${NEO4J_AUTH}
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*
+      NEO4J_dbms_security_procedures_allowlist: apoc.*
     volumes:
       - ${NEO4J_HOST_DIR}/data:/data
       - ${NEO4J_HOST_DIR}/logs:/logs
